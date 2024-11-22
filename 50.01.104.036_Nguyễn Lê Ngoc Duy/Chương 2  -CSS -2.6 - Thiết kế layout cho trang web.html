@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thiết kế layout cho trang web</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css"
+        integrity="sha512-9xKTRVabjVeZmc+GUW8GgSmcREDunMM+Dt/GrzchfN8tkwHizc5RP4Ok/MXFFy5rIjJjzhndFScTceq5e6GvVQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        #container {
+            width: 1000px;
+            min-height: 500px;
+            background-color: #ccc;
+            display: inline-block;
+        }
+
+        header {
+            background-color: rgb(76, 175, 51);
+            height: 50px;
+            position: relative;
+            border: 1 solid;
+        }
+
+        nav {
+            height: 30px;
+            background-color: rgb(45, 156, 91);
+            color: #FFF
+        }
+
+        a {
+            text-decoration: none;
+            color: #FFF;
+        }
+
+        #content {
+            background-color: #FCF;
+            min-height: 400px;
+            width: 790px;
+            float: right;
+        }
+
+        #right {
+            background-color: rgb(205, 11, 253);
+            min-height: 400px;
+            width: 200px;
+            float: right;
+        }
+
+        footer {
+            background-color: #C09;
+            color: #FFF;
+            height: 30px;
+            text-align: center;
+            clear: both;
+            margin: 5px 0px 0px 0px;
+            padding: 10px 10px 0px 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <header>
+            <div style="position: absolute; top: 5px; right: 5px;">
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-google"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-github"></i>
+    </div>
+    </header>
+    <!-- menu ngang -->
+    <nav>
+        <div style="float: left;">
+            <a href="">Home</a>
+            <a href="">About Us</a>
+            <a href="">Products</a>
+            <a href="">FeedBack</a>
+            <a href="">Contact Us</a>
+            <a href="">FAQs</a>
+            <a href="">Site Map</a>
+        </div>
+        <div style="float: right;">
+            <img src="https://www.bing.com/th/id/OGC.178dac3a724c76f619dde84974e94560?pid=1.7&rurl=https%3a%2f%2fi.pinimg.com%2foriginals%2f12%2f1c%2f24%2f121c2405e32fdc8cd00cccb0e6281c6f.gif&ehk=SEq31oTQVxe4LIwb9PZS%2fw2GkQNIrSp%2fu3GdLq4J2ro%3d"
+                alt="Việt Nam" width="34" height="auto">
+        </div>
+    </nav>
+    <div style="clear: both;"></div>
+    <!-- nội dung trang -->
+    <div id="content">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/fs1EKcWoFto?si=p3T4vPojleM9yuIt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+    <div id="right">
+        nội dung bên trái
+    </div>
+    <footer>
+        &&& Bản quyền thuộc về Nguyễn Lê Ngọc Duy &&&
+    </footer>
+
+
+    </div>
+</body>
+
+</html>
