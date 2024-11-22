@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang liên hệ</title>
+
+    <style>
+        form {
+            background: #eee;
+            display:inline-block;
+        }
+        form label {
+            display: inline-block;
+            width:80px;
+            background-color: #eee;
+            margin: 10px 3px 3px 8px;
+        }
+        form input, form select {
+            width: 150px;
+            height: 20px;
+            margin: 0px 5px;
+            box-sizing: border-box;
+        }
+        form select {margin: 1px;}
+        form button {
+            display: block;
+            margin: 10px 0px 12px 98px;
+            width: 80px;
+            height: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h2>Contact Us</h2>
+        <form action="">
+            <table>
+                <tbody>
+                    <tr>
+                        <td><label for="firstname">Frist name:</label></td>
+                        <td><input type="text" name="firstname" id="firstname"> <br></td>
+                    </tr>
+
+                    <tr>
+                        <td><label for="lastname">Last name</label></td>
+                        <td><input type="text" name="lastname" id="lastname"> <br></td>
+                    </tr>
+
+                    <tr>
+                        <td><label for="mail">Email:</label></td>
+                        <td><input type="email" name="email" id="mail"> <br></td>
+                    </tr>
+
+                    <tr>
+                        <td><label for="town">Town:</label></td>
+                        <td>
+                            <select name="town" id="town">
+                                <option value="1" selected>TPHCM</option>
+                                <option value="2">HANOI</option>
+                                <option value="3">DANANG</option>
+                                <option value="4">HUE</option>
+                            </select> <br>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="2"><button>Submit</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+    </div>
+
+</body>
+
+</html>

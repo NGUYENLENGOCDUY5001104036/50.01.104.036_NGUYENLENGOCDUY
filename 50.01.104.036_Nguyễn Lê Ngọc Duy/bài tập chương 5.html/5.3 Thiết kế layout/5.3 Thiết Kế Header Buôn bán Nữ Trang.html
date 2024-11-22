@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css" integrity="sha512-9xKTRVabjVeZmc+GUW8GgSmcREDunMM+Dt/GrzchfN8tkwHizc5RP4Ok/MXFFy5rIjJjzhndFScTceq5e6GvVQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        body {
+            margin: 0;
+        }
+        .container {
+            margin-left: auto;
+            margin-right: auto;
+        }
+        header {
+            background-color: #FFF2EB;
+            height: 100px;
+            position: sticky;
+            padding: 10px 0;
+            font-family: sans-serif;
+            color: #4D1F08;
+        }
+        header .wrap {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        header .logo img {
+            height: 54px;
+            width: auto;
+        }
+        header .menu ul {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            display: flex;
+            align-items: center;
+        }
+        header .menu ul li {
+            margin: 0 15px;
+        }
+        header .menu ul li a {
+            color: #4D1F08;
+            font-size: 16px;
+            font-weight: 600;
+            text-transform: capitalize;
+        }
+        header .menu ul li a .active, header .menu ul li a:hover {
+            color: #957461;
+        }
+        header .button {
+            padding: 15px 30px;
+            display: inline-block;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            color: #FFFFFF;
+            background-color: #957461;
+        }
+        header .button:hover {
+            color: #FFFFFF;
+            background-color: #957461;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="wrap">
+                <div class="logo">
+                    <span style="font-size: 30px;font-weight: 600;text-align: top;">
+                        Nam Thanh Nữ Tú</span>
+                </div>
+
+                <nav class="menu">
+                    <ul>
+                        <li><a href="">Home</a></li>
+                        <li><a href="">About Us</a></li>
+                        <li><a href="">Shop</a></li>
+                        <li><a href="">Contact</a></li>
+                    </ul>
+                </nav>
+
+                <div>
+                    <button><i class="fa-solid fa-cart-shopping"></i>
+                    <span class="button">Giỏ Hàng</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+</body>
+</html>

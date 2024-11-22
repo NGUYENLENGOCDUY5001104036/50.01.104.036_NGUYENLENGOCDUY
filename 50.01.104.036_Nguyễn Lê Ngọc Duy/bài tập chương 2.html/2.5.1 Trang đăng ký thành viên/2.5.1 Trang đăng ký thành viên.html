@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang đăng ký thành viên</title>
+
+    <style>
+        .mytexbox {
+            color: #99FF33;
+            background-color: #006699;
+            border: 1px solid #996633;
+            width:500px;
+        }
+        .form1table {
+            border: 5px groove #993366;
+            background-color: #FFDDDD;
+            color: #003399;
+        }
+        .form1tabletd {
+            border: 1px solid #CC9999;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <table class="form1table" border="1" width="500" cellpadding="4" cellspacing="0" >
+            <caption>
+                <h2>ĐĂNG KÝ THÀNH VIÊN CLB YÊU NHẠC</h2>
+            </caption>
+            <tbody>
+                <tr>
+                    <td>Họ tên</td>
+                    <td class="form1tabletd"><input class="mytexbox" type="text" name="hoten" placeholder="Nguyễn Văn A" required></td>
+                </tr> <br>
+    
+                <tr>
+                    <td>Tên đăng nhập</td>
+                    <td class="form1tabletd"><input class="mytexbox" type="text" name="tendangnhap" placeholder="Nguyễn A" required></td>
+                </tr> <br>
+    
+                <tr>
+                    <td>Mật khẩu</td>
+                    <td class="form1tabletd"><input class="mytexbox" type="password" name="maukhau" required></td>
+                </tr> <br>
+    
+                <tr>
+                    <td>Gõ lại mật khẩu</td>
+                    <td class="form1tabletd"><input class="mytexbox" type="password" name="golaimaukhau" required></td>
+                </tr> <br>
+    
+                <tr>
+                    <td>Giới tính</td>
+                    <td class="form1tabletd">
+                        <input type="radio" name="gioitinh" id="nam">
+                        <label for="nam">Nam</label>
+    
+                        <input type="radio" name="gioitinh" id="nu">
+                        <label for="nu">Nữ</label>
+                    </td>
+                </tr> <br>
+    
+                <tr>
+                    <td>Ngoại ngữ</td>
+                    <td class="form1tabletd">
+                        <input type="checkbox" name="ngoaingu" id="anhvan">
+                        <label for="anhvan">Anh văn</label>
+    
+                        <input type="checkbox" name="ngoaingu" id="phapvan">
+                        <label for="phapvan">Pháp văn</label>
+    
+                        <input type="checkbox" name="ngoaingu" id="hoavan">
+                        <label for="hoavan">Hoa văn</label>
+                    </td>
+                </tr> <br>
+    
+                <tr>
+                    <td>Nghề nghiệp</td>
+                    <td class="form1tabletd">
+                        <select class="mytexbox">
+                            <option value="0" selected disabled>Bạn làm nghề gì</option>
+                            <option value="1">Học sinh</option>
+                            <option value="2">Giáo viên</option>
+                            <option value="3">Nhân viên</option>
+                        </select>
+                    </td>
+                </tr> <br>
+    
+                <tr>
+                    <td>Hình</td>
+                    <td class="form1tabletd"><input class="mytexbox" type="file" name="upload_file"> </td>
+                </tr> <br>
+    
+                <tr>
+                    <td>Sở thích</td>
+                    <td>
+                        <textarea class="mytexbox" name="sothich" rows="6"></textarea>
+                    </td>
+                </tr>
+    
+                <tr>
+                    <td colspan="2" align="center" class="form1tabletd"> <button>Đăng kí</button>
+                        <button>Làm lại</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table> 
+    </div>
+</body>
+
+</html>

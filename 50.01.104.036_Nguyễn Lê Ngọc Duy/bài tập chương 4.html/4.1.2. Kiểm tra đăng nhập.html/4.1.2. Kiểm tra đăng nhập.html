@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng nhập</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Đảm bảo có jQuery -->
+</head>
+<body>
+    <style>
+        table {
+            border: 1px groove #000000;
+           
+        }
+
+        td {
+            border: 1px groove #000000;
+            padding: 10px;
+        }
+
+        .cot3 {
+            background-color: bisque;
+        }
+    </style>
+
+    <table align="center">
+        <tr>
+            <td>Username</td>
+            <td><input type="text" id="username"></td>
+        </tr>
+        <tr>
+            <td>Password</td>
+            <td><input type="password" id="password"></td>
+        </tr>
+        <tr>
+            <td colspan="2" class="cot3">
+                <p id="error-message" style="color: red; display: none;">Sai thông tin đăng nhập!</p>
+                <p id="correct-message" style="color: green; display: none;">Chúc mừng, bạn đã đăng nhập thành công!</p>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" value="Login" id="login-button"></td>
+        </tr>
+    </table>
+
+    <script>
+        $(document).ready(function() {
+            // Khi nhấn nút Login
+            $('#login-button').on('click', function() {
+                var username = $('#username').val(); // Lấy giá trị của trường Username
+                var password = $('#password').val(); // Lấy giá trị của trường Password
+
+                // Kiểm tra thông tin đăng nhập
+                if (username === 'admin' && password === 'admin') {
+                    // Nếu đúng thông tin, hiển thị thông báo thành công và ẩn thông báo lỗi
+                    $('#correct-message').show();
+                    $('#error-message').hide();
+                } else {
+                    // Nếu sai thông tin, hiển thị thông báo lỗi và ẩn thông báo thành công
+                    $('#error-message').show();
+                    $('#correct-message').hide();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
