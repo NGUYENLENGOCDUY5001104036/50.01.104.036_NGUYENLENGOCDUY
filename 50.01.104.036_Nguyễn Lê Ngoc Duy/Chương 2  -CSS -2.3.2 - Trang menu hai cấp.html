@@ -1,0 +1,90 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Menu Ngang 2 Cấp</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			margin: 0;
+			padding: 0;
+			background-color: #f4f4f4;
+		}
+		.navbar {
+			background-color: #333;
+			padding: 10px 0;
+		}
+		.menu {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+			display: flex;
+			justify-content: center;
+		}
+		.menu li {
+			position: relative;
+			margin: 0 15px;
+		}
+		.menu li a {
+			color: white;
+			text-decoration: none;
+			font-size: 16px;
+			padding: 8px 15px;
+			display: block;
+			text-align: center;
+			transition: background-color 0.3s;
+		}
+		.menu li a:hover {
+			background-color: #575757;
+			border-radius: 5px;
+		}
+		.menu li a:focus, .menu li a:active {
+			background-color: #007BFF;
+		}
+		.menu li ul {
+			display: none;
+			position: absolute;
+			top: 100%;
+			left: 0;
+			background-color: #333;
+			list-style-type: none;
+			padding: 0;
+			margin: 0;
+			min-width: 180px;
+			border-radius: 5px;
+		}
+		.menu li:hover > ul {
+			display: block;
+		}
+		.menu li ul li a {
+			padding: 8px 15px;
+			color: white;
+			text-align: left;
+		}
+		.menu li ul li a:hover {
+			background-color: #575757;
+		}
+	</style>
+</head>
+<body>
+	<nav class="navbar">
+		<ul class="menu">
+			<li><a href="#">Trang chủ</a></li>
+			<li><a href="#">Giới thiệu</a></li>
+			<li><a href="#">Dự án</a></li>
+			<li><a href="#">Sản phẩm</a>
+				<ul>
+					<li><a href="#">Tivi</a></li>
+					<li><a href="#">Tủ lạnh</a></li>
+					<li><a href="#">Laptop</a></li>
+					<li><a href="#">Máy tính bảng</a></li>
+					<li><a href="#">Điện thoại</a></li>
+				</ul>
+			</li>
+			<li><a href="#">Dịch vụ</a></li>
+			<li><a href="#">Tin tức</a></li>
+			<li><a href="#">Liên hệ</a></li>
+		</ul>
+	</nav>
+</body>
+</html>

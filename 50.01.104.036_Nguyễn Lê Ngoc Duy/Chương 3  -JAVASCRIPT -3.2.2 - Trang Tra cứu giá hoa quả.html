@@ -1,0 +1,35 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Giá hoa quả</title>
+</head>
+<body>
+	<h2>Giá hoa quả</h2>
+	<input type="text" id="fruitName" placeholder="Nhập tên hoa quả">
+	<button onclick="checkPrice()">Xem giá ngay</button>
+	<p id="priceResult"></p>
+
+	<script>
+		function checkPrice() {
+			const fruitPrices = {
+				"Ổi": 20000,
+				"Dưa Hấu": 20000,
+				"Tao": 30000,
+				"Cam": 40000,
+				"Chôm Chôm": 40000,
+				"Măng Cụt": 50000
+			};
+			const fruitName = document.getElementById("fruitName").value.trim();
+			const price = fruitPrices[fruitName];
+			const resultElement = document.getElementById("priceResult");
+
+			if (price) {
+				resultElement.innerText = price + " VNĐ/Kg";
+			} else {
+				resultElement.innerText = "Không có thông tin về giá của " + fruitName;
+			}
+		}
+	</script>
+</body>
+</html>

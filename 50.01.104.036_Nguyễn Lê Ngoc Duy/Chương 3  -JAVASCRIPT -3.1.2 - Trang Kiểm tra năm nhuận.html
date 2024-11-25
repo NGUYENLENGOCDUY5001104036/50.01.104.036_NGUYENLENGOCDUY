@@ -1,0 +1,66 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Kiểm Tra Năm Nhuận</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			margin: 20px;
+			padding: 20px;
+			background-color: #f4f4f4;
+		}
+		h1 {
+			color: #333;
+		}
+		label {
+			font-size: 18px;
+		}
+		input {
+			padding: 5px;
+			font-size: 16px;
+			margin: 10px 0;
+		}
+		button {
+			padding: 10px 20px;
+			font-size: 16px;
+			cursor: pointer;
+			background-color: #4CAF50;
+			color: white;
+			border: none;
+			border-radius: 5px;
+		}
+		.result {
+			font-size: 18px;
+			margin-top: 20px;
+		}
+	</style>
+</head>
+<body>
+	<h1>Kiểm Tra Năm Nhuận</h1>
+	<label for="year">Nhập năm:</label>
+	<input type="number" id="year" placeholder="Nhập năm" required>
+	<button onclick="kiemTraNamNhuan()">Kiểm tra</button>
+	<p class="result" id="result"></p>
+
+	<script>
+		function kiemTraNamNhuan() {
+			const year = document.getElementById("year").value;
+			const resultElement = document.getElementById("result");
+
+			if (year === "") {
+				resultElement.innerText = "Vui lòng nhập năm!";
+				return;
+			}
+
+			const nam = parseInt(year);
+
+			if ((nam % 4 === 0 && nam % 100 !== 0) || (nam % 400 === 0)) {
+				resultElement.innerText = `${nam} năm nhuận.`;
+			} else {
+				resultElement.innerText = `${nam} năm không nhuận.`;
+			}
+		}
+	</script>
+</body>
+</html>

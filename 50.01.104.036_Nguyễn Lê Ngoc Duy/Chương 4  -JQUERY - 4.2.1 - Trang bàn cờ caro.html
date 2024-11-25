@@ -1,0 +1,112 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bàn Cờ Caro</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+            margin: 0;
+            position: relative;
+        }
+        .board {
+            display: grid;
+            grid-template-columns: repeat(10, 50px);
+            grid-template-rows: repeat(10, 50px);
+            gap: 5px;
+            display: none;
+        }
+        .cell {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: lightgray;
+            cursor: pointer;
+            font-size: 24px;
+        }
+        .board div:nth-child(odd) {
+            background-color: lightgray;
+        }
+        .board div:nth-child(even) {
+            background-color: #e0e0e0;
+        }
+        .board.show {
+            display: grid;
+            animation: showBoard 1s ease-in-out;
+        }
+        @keyframes showBoard {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        .board.hide {
+            animation: hideBoard 1s ease-in-out;
+            display: none;
+        }
+        @keyframes hideBoard {
+            from {
+                opacity: 1;
+            }
+            to {
+                opacity: 0;
+            }
+        }
+        button {
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="toggleBoard()">Hiện/Ẩn Bàn Cờ</button>
+    <div id="board" class="board"></div>
+    <script>
+        let currentPlayer = 'X';
+        let boardVisible = false;
+        const board = document.getElementById("board");
+
+        function createBoard() {
+            for (let i = 0; i < 100; i++) {
+                const cell = document.createElement("div");
+                cell.classList.add("cell");
+                cell.onclick = function () {
+                    if (!cell.textContent) {
+                        cell.textContent = currentPlayer;
+                        currentPlayer = (currentPlayer === 'X') ? 'O' : 'X';
+                    }
+                };
+                board.appendChild(cell);
+            }
+        }
+
+        function toggleBoard() {
+            boardVisible = !boardVisible;
+            board.classList.toggle("show", boardVisible);
+            board.classList.toggle("hide", !boardVisible);
+        }
+
+        createBoard();
+    </script>
+</body>
+</html>

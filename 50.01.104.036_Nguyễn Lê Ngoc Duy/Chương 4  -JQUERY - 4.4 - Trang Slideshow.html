@@ -1,0 +1,81 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Gallery</title>
+	<style>
+		h1, .slideshow, .button {
+			text-align: center;
+		}
+		img {
+			width: 180px;
+			height: 150px;
+		}
+		body {
+			margin: 0 auto;
+			width: 1000px;
+		}
+		.slideshow_inner {
+			margin-left: 10px;
+			width: 1000px;
+		}
+		.slideshow {
+			width: 1000px;
+			overflow: hidden;
+		}
+		.button {
+			margin-top: 10px;
+		}
+	</style>
+	<script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+	<script>
+		var i = 0;
+		$(document).ready(function (e) {
+			$("#btnLeft").click(function (e) {
+				if (i > 0) {
+					$(".slideshow_inner").animate({
+						marginLeft: i -= 250
+					}, 500);
+				}
+			});
+			$("#btnRight").click(function (e) {
+				if (i < 2500) {
+					$(".slideshow_inner").animate({
+						marginLeft: i += 250
+					}, 500);
+				}
+			});
+		});
+	</script>
+</head>
+<body>
+	<header>
+		<h1 style="color:#00F;">GALLERY</h1>
+	</header>
+	<section>
+		<div class="slideshow">
+			<div class="slideshow_inner">
+				<a href="images/big/porsche718_1.jpg">
+					<img src="images/small/porsche718_1.jpg">
+				</a>
+				<a href="images/big/porsche718_2.jpg">
+					<img src="images/small/porsche718_2.jpg">
+				</a>
+				<a href="images/big/porsche718_3.jpg">
+					<img src="images/small/porsche718_3.jpg">
+				</a>
+				<a href="images/big/porsche718_4.jpg">
+					<img src="images/small/porsche718_4.jpg">
+				</a>
+				<a href="images/big/porsche718_5.jpg">
+					<img src="images/small/porsche718_5.jpg">
+				</a>
+			</div>
+		</div>
+		<div class="button">
+			<input type="button" id="btnLeft" name="btnLeft" value="<<" />
+			<input type="button" id="btnRight" name="btnRight" value=">>" />
+		</div>
+	</section>
+</body>
+</html>

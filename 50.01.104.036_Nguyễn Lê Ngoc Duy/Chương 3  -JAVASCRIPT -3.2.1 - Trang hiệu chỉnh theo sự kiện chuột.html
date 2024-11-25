@@ -1,0 +1,47 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>DOM Event Example</title>
+</head>
+<body>
+	<h2>Chuyển đổi nội dung và sự kiện với DOM</h2>
+	<div id="hoverDiv" style="width: 200px; height: 50px; background-color: lightblue; text-align: center; line-height: 50px;">
+		Hover Me
+	</div>
+	<br><br>
+	<img id="image" src="https://via.placeholder.com/150" alt="Image" style="width: 150px; height: 150px;">
+	<br><br>
+	<button onclick="showCurrentTime()">Hiển thị thời gian hiện tại</button>
+	<p id="timeResult"></p>
+	<br><br>
+	<input type="text" id="textbox" placeholder="Nhập văn bản ở đây">
+	<button onclick="convertToUpperCase()">Chuyển sang chữ IN HOA</button>
+	<p id="textboxResult"></p>
+	<script>
+		document.getElementById("hoverDiv").addEventListener("mouseover", function() {
+			this.innerText = "Mouse Event";
+		});
+		document.getElementById("hoverDiv").addEventListener("mouseout", function() {
+			this.innerText = "Hover Me";
+		});
+		document.getElementById("image").addEventListener("mouseover", function() {
+			this.style.width = "165px";
+			this.style.height = "165px";
+		});
+		document.getElementById("image").addEventListener("mouseout", function() {
+			this.style.width = "150px";
+			this.style.height = "150px";
+		});
+		function showCurrentTime() {
+			const currentDate = new Date();
+			const timeString = currentDate.toLocaleString();
+			document.getElementById("timeResult").innerText = "Ngày và giờ hiện tại: " + timeString;
+		}
+		function convertToUpperCase() {
+			const textboxValue = document.getElementById("textbox").value;
+			document.getElementById("textboxResult").innerText = textboxValue.toUpperCase();
+		}
+	</script>
+</body>
+</html>
